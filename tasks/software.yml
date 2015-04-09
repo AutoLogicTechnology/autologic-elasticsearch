@@ -1,0 +1,21 @@
+---
+
+- name: Check for an existing installation
+  stat:
+    path: "/usr/share/elasticsearch/bin/elasticsearch"
+    get_md5: false
+  register: have_es
+
+- name: Install Dependencies
+  yum:
+    name: "{{item}}"
+    state: "present"
+    update_cache: true
+  with_items: autologic_elasticsearch_dependencies
+  when: not have_es.stat.exists 
+
+- name: Install ElasticSearch
+  yum:
+    name: "{{autologic_elasticsearch_rpm_url}}"
+    state: "present"
+  when: not have_es.stat.exists 

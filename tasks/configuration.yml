@@ -1,0 +1,19 @@
+---
+
+- name: Process and upload elasticsearch.yml configuration 
+  template:
+    src: "elasticsearch.yml.j2"
+    dest: "/etc/elasticsearch/elasticsearch.yml"
+    mode: 0644
+    owner: "root"
+    group: "root"
+  notify: "Restart ElasticSearch"
+
+- name: Process and upload logging.yml configuration 
+  template:
+    src: "logging.yml.j2"
+    dest: "/etc/elasticsearch/logging.yml"
+    mode: 0644
+    owner: "root"
+    group: "root"
+  notify: "Restart ElasticSearch"

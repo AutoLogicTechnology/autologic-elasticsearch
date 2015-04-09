@@ -1,0 +1,13 @@
+---
+
+- include: software.yml
+  tags: autologic_elasticsearch_play_software
+  when: autologic_elasticsearch_manage_software
+
+- include: configuration.yml
+  tags: autologic_elasticsearch_play_software
+  when: autologic_elasticsearch_manage_configuration
+
+- include: service.yml
+  tags: autologic_elasticsearch_play_service
+  when: autologic_elasticsearch_manage_service
