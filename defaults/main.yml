@@ -3,8 +3,8 @@ autologic_elasticsearch_manage_software: true
 autologic_elasticsearch_manage_configuration: true 
 autologic_elasticsearch_manage_service: true 
 
-autologic_elasticsearch_configuration: []
-autologic_elasticsearch_logging: []
+autologic_elasticsearch_configuration: False
+autologic_elasticsearch_logging: False
 
 autologic_elasticsearch_rpm_url: "https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.5.0.noarch.rpm"
 autologic_elasticsearch_dependencies:

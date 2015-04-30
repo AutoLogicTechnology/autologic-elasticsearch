@@ -4,7 +4,7 @@ Manage ElasticSearch on your RedHat based systems.
 
 ## Version
 
-1.0.0
+1.1.0
 
 ## Variables
 
@@ -39,6 +39,20 @@ autologic_elasticsearch_dependencies:
 ```
 
 A Java runtime is needed for run ElasticSearch.
+
+## Tests
+
+The tests folder allows for an isolated testing environment using Vagrant and VirtualBox. You're free to edit the Vagrantfile to suit your needs, or ignore it completely. To test:
+
+```shell
+$ vagrant up
+```
+
+To provision the VM again after changes to the Role:
+
+```shell
+$ vagrant provision
+````
 
 ## License
 

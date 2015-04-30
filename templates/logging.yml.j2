@@ -3,6 +3,8 @@
 # 
 # Manual changes will likely be overwritten.
 
+{% if autologic_elasticsearch_logging != False %}
 {% for key,value in autologic_elasticsearch_logging.iteritems() %}
 {{key}}: {{value}}
 {% endfor %}
+{% endif %}
