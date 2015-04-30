@@ -4,7 +4,7 @@ Manage ElasticSearch on your RedHat based systems.
 
 ## Version
 
-1.1.0
+1.1.1
 
 ## Variables
 
